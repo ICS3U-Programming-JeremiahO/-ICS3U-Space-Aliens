@@ -14,6 +14,7 @@ def menu_scene():
 
     #image bank for the pybadge
     image_bank_background = stage.Bank.from_bmp16("space_aliens_background.bmp")
+    # text that is to be shown in menu scene 
     text = []
     text1 = stage.Text(width=29, height=12, font=None, palette=constants.RED_PALETTE, buffer=None)
     text1.move(20, 10)
@@ -27,12 +28,11 @@ def menu_scene():
     text3.move(40, 110)
     text3.text("Press start")
     text.append(text3)
-#set the background to image 0 in the image bank and the size (10x8 tiles of size 16)
+    #set the background to image 0 in the image bank and the size (10x8 tiles of size 16)
 
     background = stage.Grid(image_bank_background, constants.SCREEN_GRID_X, constants.SCREEN_GRID_Y)
 
-    #create a stage for the background to show on
-    #and set the frame rate to 60 fps
+    #set the frame rate to 60 fps
     game = stage.Stage(ugame.display, constants.FPS)
     #set the layers of all the sprites, items show up in order
     game.layers = text + [background]
@@ -74,7 +74,7 @@ def game_scene():
     background = stage.Grid(image_bank_background, constants.SCREEN_GRID_X, constants.SCREEN_GRID_Y)
 
     #my sprite 
-    ship = stage.Sprite(image_bank_sprite, 5, 75, 66)
+    ship = stage.Sprite(image_bank_sprite, 5, 75, 110)
 
     #create a stage for the background to show on
     #and set the frame rate to 60 fps
