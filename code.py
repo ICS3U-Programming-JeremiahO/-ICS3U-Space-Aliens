@@ -91,7 +91,7 @@ def menu_scene():
     text = []
     text1 = stage.Text(width=29, height=12, font=None, palette=constants.RED_PALETTE, buffer=None)
     text1.move(20, 10)
-    text1.text("Space alien game")
+    text1.text("Battle chess")
     text.append(text1)
     text2 = stage.Text(width=29, height=12, font=None, palette=constants.RED_PALETTE, buffer=None)
     text2.move(30, 60)
